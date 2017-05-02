@@ -2,7 +2,6 @@
 //  ShopTableViewCell.swift
 //  haendlersuche
 //
-//  Created by Mia Jaap on 21.11.16.
 //  Copyright © 2016 Matthias Jaap. All rights reserved.
 //
 
@@ -10,7 +9,10 @@ import UIKit
 
 class ShopTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+	@IBOutlet weak var vendorTitle: UILabel!
+	@IBOutlet weak var vendorAdress: UILabel!
+
+	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

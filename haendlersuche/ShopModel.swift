@@ -2,34 +2,32 @@
 //  ShopModel.swift
 //  haendlersuche
 //
-//  Created by Mia Jaap on 21.11.16.
 //  Copyright © 2016 Matthias Jaap. All rights reserved.
 //
 
 import UIKit
 
-class ShopModel: UITabBarController {
+class ShopModel {
+	var id: String?
+	var title: String?
+	var type: String?
+	var language: String?
+	var locality: String?
+	var postal_code: String?
+	var thoroughfare: String?
+	var latitude: String?
+	var longitude: String?
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	init(json: NSDictionary) {
+		self.id = json["id"] as? String ?? "0"
+		self.title = json["title"] as? String ?? ""
+		self.type = json["type"] as? String ?? ""
+		self.language = json["language"] as? String  ?? ""
+		self.thoroughfare = json["thoroughfare"] as? String  ?? ""
+		self.locality = json["locality"] as? String  ?? ""
+		self.postal_code = json["postal_code"] as? String  ?? ""
+		self.latitude = json["lat"] as? String  ?? "0"
+		self.longitude = json["lon"] as? String  ?? "0"
+	}
 
 }

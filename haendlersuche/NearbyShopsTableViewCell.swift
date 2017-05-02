@@ -2,7 +2,6 @@
 //  NearbyShopsTableViewCell.swift
 //  haendlersuche
 //
-//  Created by Mia Jaap on 21.11.16.
 //  Copyright © 2016 Matthias Jaap. All rights reserved.
 //
 
@@ -10,6 +9,9 @@ import UIKit
 
 class NearbyShopsTableViewCell: UITableViewCell {
 
+	@IBOutlet weak var nearByShopAdress: UILabel!
+	@IBOutlet weak var nearByShopTitle: UILabel!
+	@IBOutlet weak var shopDistance: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
